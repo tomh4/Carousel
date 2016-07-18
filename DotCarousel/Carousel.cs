@@ -55,13 +55,6 @@ namespace Near.DotCarousel
                 page1.Children.Add(lab);
                 page1.Children.Add(lab2);
                 page1.Children.Add(lab3);
-                var bgImage = new Image();
-                bgImage.Aspect = Aspect.AspectFill;
-                bgImage.HorizontalOptions = LayoutOptions.FillAndExpand;
-                bgImage.VerticalOptions = LayoutOptions.FillAndExpand;
-                bgImage.SetBinding(Image.SourceProperty, "Background");
-                page1.Children.Add(bgImage);
-                AbsoluteLayout.SetLayoutBounds(bgImage, new Rectangle(0, 0, 1, 1));
                 AbsoluteLayout.SetLayoutFlags(bgImage, AbsoluteLayoutFlags.All);
                 AbsoluteLayout.SetLayoutBounds(lab, new Rectangle(0, 0.3, 1, 0.2));
                 AbsoluteLayout.SetLayoutFlags(lab, AbsoluteLayoutFlags.All);
