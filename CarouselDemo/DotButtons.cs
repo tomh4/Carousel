@@ -7,9 +7,25 @@ using Xamarin.Forms;
 
 namespace Near.DotCarousel
 {
-    public class DotButton : Button
+    public class DotButton : BoxView
     {
         public int index;
         public DotButtonsLayout layout;
+        public event ClickHandler Clicked;
+        public delegate void ClickHandler(DotButton sender);
+        public DotButton()
+        {
+            var clickCheck = new TapGestureRecognizer()
+                {
+                    Command = new Command(() =>
+                        {
+                            if (Clicked != null)
+                            {
+                                Clicked(this);
+                            }
+                        })
+                };
+            GestureRecognizers.Add(clickCheck);
+        }
     }
 }

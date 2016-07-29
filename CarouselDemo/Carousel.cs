@@ -95,7 +95,7 @@ namespace Near.DotCarousel
             dotLayout = new DotButtonsLayout(pages.Count, Color.White, 10);
             //Subscribe to the click events of the dot buttons to switch to the desired 
             //page
-            foreach (Button dot in dotLayout.dots)
+            foreach (DotButton dot in dotLayout.dots)
                 dot.Clicked += dotClicked;
             Children.Add(dotLayout);
             AbsoluteLayout.SetLayoutBounds(dotLayout, new Rectangle(0, 0.92, 1, .05));
@@ -114,7 +114,7 @@ namespace Near.DotCarousel
                     dotLayout.dots[i].Opacity = 0.5;
         }
         //The function called by the buttons clicked event
-        private void dotClicked(object sender, EventArgs e)
+        private void dotClicked(object sender)
         {
             var button = (DotButton)sender;
             //Get the selected buttons index

@@ -25,7 +25,6 @@ namespace Near.DotCarousel
             {
                 dots[i] = new DotButton
                     {
-                        BorderRadius = Convert.ToInt32(dotSize / 2),
                         HeightRequest = dotSize,
                         WidthRequest = dotSize,
                         BackgroundColor = dotColor,
